@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func main() {
+	floor := 4 - (10-1)/9
+	column := (10-1)%9 + 1
+	fmt.Println(floor, column)
 	node := []int{1}
 	slice1 := [][]int{node}
 	slice2 := make([][]int, len(slice1))
