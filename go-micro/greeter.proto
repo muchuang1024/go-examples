@@ -1,0 +1,16 @@
+syntax = "proto3"; // Proto文件使用的协议版本，新项目建议采用proto3
+
+package greeter; // Proto文件的包名，包名类似于命名空间
+option go_package = "/proto;greeter";
+
+service Greeter {
+	rpc Hello(Request) returns (Response) {}
+}
+
+message Request {
+	string name = 1;
+}
+
+message Response {
+	string msg = 1;
+}
